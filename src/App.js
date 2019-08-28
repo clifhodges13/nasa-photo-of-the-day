@@ -18,8 +18,10 @@ function App() {
   
   return (
     <div className="App">
-      <Heading />
-      <Photo title={data.title} url={data.url} explanation={data.explanation} />
+      <div className="Container">
+        <Heading />
+        <Photo title={data.title} url={data.url} explanation={data.explanation} />
+      </div>
     </div>
   );
 }
