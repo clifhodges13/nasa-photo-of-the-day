@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState} from 'react'
 import Explanation from './Explanation'
 import {
   Button,
@@ -6,20 +6,16 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter
-} from 'reactstrap';
+} from 'reactstrap'
 import styled from 'styled-components'
-import HDImageModal from './HDImageModal'
 
 export default function ExplanationModal(props) {
 
   const [modal, setModal] = useState(false)
   
-
   const toggle = () => {
     setModal(!modal)
   }
-
-  
 
   const StyledButtonWrapper = styled.div `
     font-family: 'Red Hat Text';
@@ -39,7 +35,6 @@ export default function ExplanationModal(props) {
           <Button color="warning" onClick={toggle}>Close</Button>
         </ModalFooter>
       </Modal>
-      <HDImageModal src={props.url} title={props.title} />
     </div>
   )
 }

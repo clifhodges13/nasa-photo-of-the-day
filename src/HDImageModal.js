@@ -14,10 +14,6 @@ export default function HDImageModal(props) {
     setHDToggle(!HDModal)
   }
 
-  const StyledHDImageBackground = styled.div `
-    background: ${props.hdurl}
-  `
-
   const StyledButtonWrapper = styled.div `
     font-family: 'Red Hat Text';
   `
@@ -27,7 +23,7 @@ export default function HDImageModal(props) {
       <Button color="success" onClick={HDToggle}>View HD Image</Button>
           <Modal isOpen={HDModal} toggle={HDToggle}>
             <ModalBody>
-              <StyledHDImageBackground />
+              <img src={props.url} alt={props.title} />
               <StyledButtonWrapper>
                 <Button color="warning" onClick={HDToggle}>Close</Button>
               </StyledButtonWrapper>

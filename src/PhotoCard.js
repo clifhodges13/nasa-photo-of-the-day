@@ -1,7 +1,6 @@
 import React from 'react'
 import ExplanationModal from './ExplanationModal'
 import styled from 'styled-components'
-import HDImageModal from './HDImageModal';
 
 export default function Photo(props) {
 
@@ -32,7 +31,7 @@ export default function Photo(props) {
     <div>
       <StyledH3>{props.title}</StyledH3>
       <StyledImage src={props.url} alt={props.title} />
-      <ExplanationModal explanation={props.explanation} title={props.title} src={props.hdurl} />
+      <ExplanationModal explanation={props.explanation} title={props.title} src={props.url} />
     </div>
   )
 }
